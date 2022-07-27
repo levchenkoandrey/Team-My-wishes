@@ -102,6 +102,180 @@ video {
   --bg: #4b5056;
   --white: #ffffff;
 }
+/* скоректировать размеры на пузыри и аву после добавления меню */
+.conteinerPage {
+  max-width: 1440px;
+  height: 100vh;
+}
+.myWishes {
+  height: 120px;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  padding-left: 80px;
+  padding-top: 40px;
+  z-index: 1;
+  background-color: var(--white);
+  font-family: "Baloo 2", cursive;
+  color: var(--primary-light);
+  font-size: 30px;
+  line-height: 48px;
+}
+.ava {
+  display: inline-block;
+  width: 560px;
+  height: 625px;
+}
+.active {
+  margin-top: 137px;
+  margin-left: 80px;
+}
+.active img {
+  display: block;
+  position: absolute;
+  top: 220px;
+  left: 180px;
+}
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+.fb {
+  position: absolute;
+  top: 712px;
+  left: 80px;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: var(--secondary-light);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: var(--secondary-light);
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -40px;
+  opacity: 1;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+}
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #c02c47;
+}
+.information {
+  display: inline-block;
+}
+.kim {
+  display: block;
+  max-width: 640px;
+  height: 128px;
+  font-family: "Baloo 2", cursive;
+  color: var(--primary-light);
+  font-size: 80px;
+  line-height: 129px;
+  position: absolute;
+  left: 720px;
+  top: 220px;
+}
+.kim p {
+  display: block;
+  max-width: 640px;
+  height: 84px;
+  font-family: "Nunito", sans-serif;
+  color: var(--primary-light);
+  font-size: 20px;
+  line-height: 140%;
+  padding-right: 35px;
+}
+.calc {
+  width: 318px;
+  height: 318px;
+  border-radius: 50%;
+  position: absolute;
+  left: 976px;
+  top: 442px;
+  background-color: var(--secondary-light);
+  text-align: center;
+  mix-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+}
+.calc p {
+  font-family: "Nunito", sans-serif;
+  color: var(--primary-light);
+  font-size: 20px;
+  line-height: 27px;
+}
+#demo {
+  font-family: "Baloo 2", cursive;
+  font-size: 30px;
+  line-height: 48px;
+}
+.away {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: absolute;
+  left: 1229px;
+  top: 630px;
+  background-color: var(--secondary-light);
+  text-align: center;
+  mix-blend-mode: multiply;
+  font-family: "Nunito", sans-serif;
+  color: var(--primary-light);
+  font-size: 20px;
+  line-height: 28px;
+  padding-top: 50px;
+}
+.LA {
+  margin-top: 150px;
+}
 .brandsItam {
   width: 100%;
   height: 50px;
@@ -190,7 +364,7 @@ h2 {
 }
 
 .brands {
-  height: 270px;
+  min-height: 270px;
   margin: 39px 0;
 }
 .container-brands {
@@ -426,4 +600,100 @@ h2 {
   .badIdea .g-i:hover .img-GI {
     width: 335px;
   }
+  .bubbles {
+    display: none;
+  }
+  .ava img {
+    width: 75px;
+    height: 75px;
+    top: 65px;
+    left: 20px;
+    z-index: 1;
+  }
+  .myWishes {
+    line-height: 38px;
+    top: 40px;
+    left: 25px;
+  }
+  .fb {
+    left: 302px;
+    top: 74px;
+    z-index: 1;
+  }
+  .wrapper .icon {
+    width: 58px;
+    height: 58px;
+    margin: 0 5px;
+  }
+  .kim {
+    width: 100%;
+    top: 207px;
+    left: 25px;
+    font-size: 61px;
+    font: height 80px;
+  }
 }
+/* .kim {
+  display: block;
+  max-width: 640px;
+  height: 128px;
+  font-family: "Baloo 2", cursive;
+  color: var(--primary-light);
+  font-size: 80px;
+  line-height: 129px;
+  position: absolute;
+  left: 720px;
+  top: 220px;
+}
+.kim p {
+  display: block;
+  max-width: 640px;
+  height: 84px;
+  font-family: "Nunito", sans-serif;
+  color: var(--primary-light);
+  font-size: 20px;
+  line-height: 140%;
+  padding-right: 35px;
+}
+.calc {
+  width: 318px;
+  height: 318px;
+  border-radius: 50%;
+  position: absolute;
+  left: 976px;
+  top: 442px;
+  background-color: var(--secondary-light);
+  text-align: center;
+  mix-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: center;
+}
+.calc p {
+  font-family: "Nunito", sans-serif;
+  color: var(--primary-light);
+  font-size: 20px;
+  line-height: 27px;
+}
+#demo {
+  font-family: "Baloo 2", cursive;
+  font-size: 30px;
+  line-height: 48px;
+}
+.away {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: absolute;
+  left: 1229px;
+  top: 630px;
+  background-color: var(--secondary-light);
+  text-align: center;
+  mix-blend-mode: multiply;
+  font-family: "Nunito", sans-serif;
+  color: var(--primary-light);
+  font-size: 20px;
+  line-height: 28px;
+  padding-top: 50px;
+} */
